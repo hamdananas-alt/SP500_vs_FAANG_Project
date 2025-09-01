@@ -1,0 +1,27 @@
+name: Smoke Test – Run SP500_VS_FAANG.py
+
+on:
+  workflow_dispatch:  # manual trigger only for now
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Show working directory and list files
+        run: |
+          pwd
+          ls -la
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'   # stable on Actions; we can switch to 3.13 later
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python SP500_VS_FAANG.py
