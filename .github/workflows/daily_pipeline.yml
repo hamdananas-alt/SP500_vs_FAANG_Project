@@ -20,7 +20,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run pipeline
-        working-directory: SP500_vs_FAANG_Project
         run: python SP500_VS_FAANG.py
 
       - name: Configure Git
