@@ -1,0 +1,36 @@
+name: Daily SP500 & FAANG Pipeline
+
+on:
+  workflow_dispatch:   # allows manual run
+  schedule:
+    - cron: "0 12 * * 1-5"  # run every weekday at 12:00 UTC
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python SP500_VS_FAANG.py
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Commit and push CSVs
+        run: |
+          git add data/processed/*.csv
+          git commit -m "Update processed CSVs [skip ci]" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
