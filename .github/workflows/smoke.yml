@@ -1,7 +1,7 @@
 name: Smoke Test
 
 on:
-  workflow_dispatch:   # allows manual trigger
+  workflow_dispatch:
 
 jobs:
   run-pipeline:
@@ -20,15 +20,8 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run pipeline
-        run: |
-          cd SP500_vs_FAANG_Project
-          ls -la
-          # python SP500_VS_FAANG.py
-
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: List files (debug)
+        run: ls -la
 
       - name: Run pipeline
         run: python SP500_VS_FAANG.py
