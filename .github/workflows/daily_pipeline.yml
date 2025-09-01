@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: List repo files
+        run: ls -R
+
       - uses: actions/checkout@v3
       - name: Run pipeline
         run: python SP500_VS_FAANG.py
