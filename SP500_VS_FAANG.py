@@ -179,7 +179,8 @@ faang_metrics = faang_metrics.loc[faang_metrics.index >= five_years_ago]
 
 
 # Save outputs for Tableau / BI
-sp500_metrics.to_csv(os.path.join(processed_folder, "sp500_metrics.csv"))
-faang_metrics.to_csv(os.path.join(processed_folder, "faang_metrics.csv"))
+sp500_metrics.to_csv(os.path.join(processed_folder, "sp500.csv"))
+faang_metrics.to_csv(os.path.join(processed_folder, "faang.csv"))
 
 # Tableau / BI can now connect to these CSVs for visualization and analysis.
+
