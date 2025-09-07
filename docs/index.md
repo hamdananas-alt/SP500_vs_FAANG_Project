@@ -6,7 +6,7 @@ This analysis combines **Python**, **GitHub Actions**, **Google Sheets**, and **
 ---
 
 ## 🔹 Live Tableau Dashboard  
-👉 [View the Interactive Dashboard]([https://public.tableau.com/app/profile/YourName/viz/SP500vsFAANG/YourDashboardName](https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  
+👉 [View the Interactive Dashboard](https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
 
 ---
 
