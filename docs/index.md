@@ -27,7 +27,9 @@ For both S&P500 and FAANG, the following metrics were computed:
 - **Daily Returns:** Percentage change day-over-day to understand short-term profitability.  
 - **30-Day Rolling Volatility & Annualized Volatility:** Measures of price fluctuation and investor sentiment.  
 
-All calculations are automated in Python and output as CSVs, which are dynamically updated and visualized in Tableau dashboards.  
+All calculations are automated in Python and output as CSVs, which are dynamically updated and visualized in Tableau dashboards.
+We had to use a work around through Google Sheets to enable Tableau public to have access to the daily updated csv files.
+
 
 ## Dashboards
 1. **Price Comparison**  
