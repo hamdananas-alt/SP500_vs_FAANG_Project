@@ -43,18 +43,29 @@ The project is fully automated using **GitHub Actions**:
 
 ## 🔹 Interactive Dashboards
 
-👉 [View on Tableau Public]([https://public.tableau.com/app/profile/your-dashboard-link](https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  
+## Interactive Dashboard
+
+[![Open in Tableau](https://img.shields.io/badge/Tableau-Dashboard-blue?logo=tableau)](https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+
+👉 [View on Tableau Public]((https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  
 
 ### Preview Screenshots
 
 | Price Comparison | Daily Returns Comparison |
 |------------------|--------------------------------------|
-| ![Price Comparison](docs/dashboard_screenshots/PriceComparison.png) | 
+| ![Price Comparison](docs/dashboard_screenshots/PriceComparison.png) |
+
+| Daily Returns Comparison |
+|------------------|--------------------------------------|
 | ![Daily Returns](docs/dashboard_screenshots/DailyReturnsComparison.png) |
 
-| Moving averages & Bollinger Bands | 30 Day Annualized Volatility |
-|-----------------|-----------------------------|
+| Moving averages & Bollinger Bands |
+|------------------|--------------------------------------|
 | ![Moving Averages & Bollinger Bands](docs/dashboard_screenshots/50_200MA_BollingerBandsComparison.png) |
+
+| 30 Day Annualized Rolling Volatility |
+|------------------|--------------------------------------|
 | ![Rolling Volatility](docs/dashboard_screenshots/30DAnnualizedVolatilityComparison.png) |
 
 ---
