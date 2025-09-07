@@ -50,7 +50,7 @@ faang_data.to_csv(os.path.join(data_folder, "faang_raw.csv"))
 sp500_raw_path = os.path.join(root_path, "data", "raw", "sp500_raw.csv")
 sp500 = pd.read_csv(sp500_raw_path, header=[0,1], index_col=0, parse_dates=True)
 
-# Flatten S&P500 headers: take first level (Price fields)
+# Flatten S&P500 headers: take first level (Date and Price fields)
 sp500.columns = sp500.columns.get_level_values(0)
 
 # Ensure data/cleaned folder exists
@@ -65,7 +65,7 @@ sp500.to_csv(sp500_cleaned_path)
 faang_raw_path = os.path.join(root_path, "data", "raw", "faang_raw.csv")
 faang = pd.read_csv(faang_raw_path, header=[0,1], index_col=0, parse_dates=True)
 
-# Flatten FAANG headers: Ticker + Field, e.g., META_Open
+# Flatten FAANG headers: take first level (Date and Price fields)
 faang.columns = [f"{col[1]}_{col[0]}" for col in faang.columns]
 
 # Save fixed FAANG to cleaned folder
@@ -81,7 +81,7 @@ sp500_cleaned = pd.read_csv(os.path.join(root_path, "data", "cleaned", "sp500_cl
 faang_cleaned = pd.read_csv(os.path.join(root_path, "data", "cleaned", "faang_cleaned.csv"),
                             parse_dates=True, index_col=0)
 
-# Cleaning function: replace zeros and fill missing values
+# Cleaning function: replace zeros and fill missing values and NULLs
 def clean_data(df):
     df = df.copy()
     df.replace(0, pd.NA, inplace=True)        # treat 0 as missing
@@ -183,4 +183,5 @@ sp500_metrics.to_csv(os.path.join(processed_folder, "sp500.csv"))
 faang_metrics.to_csv(os.path.join(processed_folder, "faang.csv"))
 
 # Tableau / BI can now connect to these CSVs for visualization and analysis.
+
 
