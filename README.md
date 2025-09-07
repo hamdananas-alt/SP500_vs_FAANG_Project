@@ -46,15 +46,16 @@ The project is fully automated using **GitHub Actions**:
 👉 [View on Tableau Public]([https://public.tableau.com/app/profile/your-dashboard-link](https://public.tableau.com/views/SP500vsFAANG_17568134555740/ClosingPrice?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))  
 
 ### Preview Screenshots
-(Replace with your own screenshots from `/docs/dashboard_screenshots/`)
 
-| Price Comparison | Moving Averages (Golden/Death Cross) |
+| Price Comparison | Daily Returns Comparison |
 |------------------|--------------------------------------|
-| ![Price Comparison](docs/dashboard_screenshots/price.png) | ![Moving Averages](docs/dashboard_screenshots/ma.png) |
+| ![Price Comparison](docs/dashboard_screenshots/PriceComparison.png) | 
+| ![Daily Returns](docs/dashboard_screenshots/DailyReturnsComparison.png) |
 
-| Bollinger Bands | Volatility & Daily Returns |
+| Moving averages & Bollinger Bands | 30 Day Annualized Volatility |
 |-----------------|-----------------------------|
-| ![Bollinger Bands](docs/dashboard_screenshots/bollinger.png) | ![Volatility](docs/dashboard_screenshots/volatility.png) |
+| ![Moving Averages & Bollinger Bands](docs/dashboard_screenshots/50_200MA_BollingerBandsComparison.png) |
+| ![Rolling Volatility](docs/dashboard_screenshots/30DAnnualizedVolatilityComparison.png) |
 
 ---
 
