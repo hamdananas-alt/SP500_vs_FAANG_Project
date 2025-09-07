@@ -28,7 +28,7 @@ For both S&P500 and FAANG, the following metrics were computed:
 - **30-Day Rolling Volatility & Annualized Volatility:** Measures of price fluctuation and investor sentiment.  
 
 All calculations are automated in Python and output as CSVs, which are dynamically updated and visualized in Tableau dashboards.
-We had to use a work around through Google Sheets to enable Tableau public to have access to the daily updated csv files.
+We had to use a work around through Google Sheets to enable Tableau public to have access to the daily updated csv files. Other paid alternatives are available to make the pipline more robust and less prone to breaking.
 
 
 ## Dashboards
